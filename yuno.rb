@@ -13,7 +13,7 @@ class Yuno < AwesomeBotFactory::Skill
   def reply
     image = "http://memecaptain.com/i?u=http%3A%2F%2Fmemecaptain.com%2Fy_u_no.jpg"
     image << "&tt=#{URI.encode_www_form_component(self.name)}" unless self.name.empty?
-    image << "&tb=#{URI.encode_www_form_component("Y U NO #{self.action}")}"
+    image << "&tb=#{URI.encode_www_form_component("Y U NO #{self.action}")}#jpg"
 
     {:type => "TextMessage", :body => image}
   end
