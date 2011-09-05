@@ -30,9 +30,9 @@ class Yuno < AwesomeBotFactory::Skill
       image = "http://memecaptain.com/i?u=http%3A%2F%2Fs3.amazonaws.com%2Fkym-assets%2Fphotos%2Fimages%2Foriginal%2F000%2F131%2F399%2Ffry.PNG%3F1307468855&tt=#{URI.encode_www_form_component("#{self.prepend} #{self.text_1}")}&tb=#{URI.encode_www_form_component("#{self.action} #{self.text_2}")}"
     end
 
-    image = nil if image == "http://memecaptain.com/i?u=http%3A%2F%2Fmemecaptain.com%2F"
+    image = nil if (self.prepend == "NOT SURE IF" && self.action != "OR") || (self.prepend != "NOT SURE IF" && self.action == "OR")
     image << "#jpg" if image
-    {:type => "TextMessage", :body => image}
+    {:type => "TextMessage", :body => image || ""}
   end
   
 end
