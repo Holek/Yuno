@@ -5,13 +5,17 @@ class Yuno < AwesomeBotFactory::Skill
     c.details = ""
     c.author = "holek"
     c.url = "http://abf-yuno.herokuapp.com/yuno"
-    c.regex = "yuno:(.+)"
+    c.regex = "^(.*)Y U NO (.+)$"
   end
   
-  matches :command, :in_your, :order, :of, :matches
+  matches :name, :action
   
   def reply
-    { :type => "TextMessage", :body => "hello world" }
+    image = "http://memecaptain.com/i?u=http%3A%2F%2Fmemecaptain.com%2Fy_u_no.jpg"
+    image << "&tt=#{URI.encode_www_form_component(self.name)}" unless self.name.empty?
+    image << "&tb=#{URI.encode_www_form_component("Y U NO #{self.action}")}"
+
+    {:type => "TextMessage", :body => image}
   end
   
 end
