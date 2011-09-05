@@ -24,7 +24,7 @@ class Yuno < AwesomeBotFactory::Skill
     image << "&tb=#{URI.encode_www_form_component("#{self.action} #{self.text_2}")}"
 
     # ALL THE
-    image = "http://memecaptain.com/i?u=http%3A%2F%2Fmemecaptain.com%2Fhttp%3A%2F%2Ftroll.me%2Fimages%2Fx-all-the-things%2Fx-all-the-things.jpg&tt=#{URI.encode_www_form_component(self.body)}" if self.action == "ALL THE"
+    image = "http://memecaptain.com/i?u=http%3A%2F%2Ftroll.me%2Fimages%2Fx-all-the-things%2Fx-all-the-things.jpg&tt=#{URI.encode_www_form_component(self.body)}" if self.action == "ALL THE"
 
     image << "#jpg"
     {:type => "TextMessage", :body => image}
