@@ -5,7 +5,7 @@ class Yuno < AwesomeBotFactory::Skill
     c.details = ""
     c.author = "holek"
     c.url = "http://abf-yuno.herokuapp.com/yuno"
-    c.regex = "^(NOT SURE IF|)(.*)(Y U NO|BUT WHEN I DO|ALL THE|OR|ACCIDENTALLY) (.+)$"
+    c.regex = "^(NOT SURE IF|)(.*)(Y U NO|BUT WHEN I DO|ALL THE|OR) (.+)$"
   end
   
   matches :prepend, :text_1, :action, :text_2
