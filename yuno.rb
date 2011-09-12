@@ -38,7 +38,7 @@ class Yuno < AwesomeBotFactory::Skill
         image = "http://memecaptain.com/i?u=#{image_url}&tt=#{URI.encode_www_form_component(self.body)}"
       when "YO DAWG"
         if self.text_1.empty? # There should be nothing before "YO DAWG"
-          image = "http://memecaptain.com/i?u=http%3A%2F%2F2.bp.blogspot.com%2F-VdG-cMb7IBo%2FTb3aSReMhVI%2FAAAAAAAAAHY%2F0i-RZfYYRkY%2Fs1600%2FXzibit.png&tt=#{URI.encode_www_form_component(self.body)}"
+          image = "http://memecaptain.com/i?u=http%3A%2F%2F2.bp.blogspot.com%2F-VdG-cMb7IBo%2FTb3aSReMhVI%2FAAAAAAAAAHY%2F0i-RZfYYRkY%2Fs1600%2FXzibit.png&tb=#{URI.encode_www_form_component(self.body)}"
         end
       end
 
