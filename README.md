@@ -20,8 +20,9 @@ So far Yuno bot supports these memes:
 
 * [Y U NO](http://knowyourmeme.com/memes/y-u-no-guy) (which it dervies its name from, as this was [the first meme to be coded](https://github.com/Holek/Yuno/compare/6d4e20bae2...bff40ff236))
 * [The Most Interesting Man in the World](http://knowyourmeme.com/memes/the-most-interesting-man-in-the-world) (also known as "I don't always ... but when I do ...")
-* [X all the Y](http://knowyourmeme.com/memes/x-all-the-y)
+* [X all the Y](http://knowyourmeme.com/memes/x-all-the-y) (including "ALL THE THINGS?")
 * [Not Sure If X](http://knowyourmeme.com/memes/futurama-fry-not-sure-if-x)
+* [Yo Dawg](http://knowyourmeme.com/memes/xzibit-yo-dawg)
 
 How to use that bot
 -------------------
@@ -34,7 +35,7 @@ If you want to use a stock Yuno described here, you can fill the URL for skill w
 
 The regex invoking the bot is:
 
-    ^(NOT SURE IF|)(.*)(Y U NO|BUT WHEN I DO|ALL THE|OR) (.+)$
+    ^(NOT SURE IF|YO DAWG|)(.*)(Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)$
 
 License
 -------
