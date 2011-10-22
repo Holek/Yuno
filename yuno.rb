@@ -43,7 +43,7 @@ class Yuno < AwesomeBotFactory::Skill
       end
       # Princess Trollestia Moooooooooon meme!
       if image.nil? && /^ ON THE MOO+N$/.match(self.text_rest)
-        image = "http://memecaptain.com/?u=https%3A%2F%2Fimg.skitch.com%2F20111022-d7g6w38mrwd5wjsmigqe61pjq4.png"
+        image = "http://memecaptain.com/i?u=https%3A%2F%2Fimg.skitch.com%2F20111022-d7g6w38mrwd5wjsmigqe61pjq4.png"
         image << "&tt=#{URI.encode_www_form_component(self.text_1)}" unless self.text_1.empty?
         image << "&tb=#{URI.encode_www_form_component(self.text_rest.strip)}"
       end
