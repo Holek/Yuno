@@ -5,10 +5,10 @@ class Yuno < AwesomeBotFactory::Skill
     c.details = ""
     c.author = "holek"
     c.url = "http://abf-yuno.herokuapp.com/yuno"
-    c.regex = "^(NOT SURE IF|YO DAWG|)(.*)(Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)$"
+    c.regex = "^(NOT SURE IF|YO DAWG|)(.*)((Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)| ON THE MOO+N)$"
   end
   
-  matches :prepend, :text_1, :action, :text_2
+  matches :prepend, :text_1, :text_rest, :action, :text_2
   
   def reply
     case self.prepend
@@ -41,7 +41,12 @@ class Yuno < AwesomeBotFactory::Skill
           image = "http://memecaptain.com/i?u=http%3A%2F%2F2.bp.blogspot.com%2F-VdG-cMb7IBo%2FTb3aSReMhVI%2FAAAAAAAAAHY%2F0i-RZfYYRkY%2Fs1600%2FXzibit.png&tb=#{URI.encode_www_form_component(self.body)}"
         end
       end
-
+      # Princess Trollestia Moooooooooon meme!
+      if image.nil? && /^ ON THE MOO+N$/.match(self.text_rest)
+        image = "http://memecaptain.com/?u=https%3A%2F%2Fimg.skitch.com%2F20111022-d7g6w38mrwd5wjsmigqe61pjq4.png"
+        image << "&tt=#{URI.encode_www_form_component(self.text_1)}" unless self.text_1.empty?
+        image << "&tb=#{URI.encode_www_form_component(self.text_rest.strip)}"
+      end
     end
 
     image << "#jpg" if image

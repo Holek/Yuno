@@ -23,6 +23,7 @@ So far Yuno bot supports these memes:
 * [X all the Y](http://knowyourmeme.com/memes/x-all-the-y) (including "ALL THE THINGS?")
 * [Not Sure If X](http://knowyourmeme.com/memes/futurama-fry-not-sure-if-x)
 * [Yo Dawg](http://knowyourmeme.com/memes/xzibit-yo-dawg)
+* [Friendship is B**ch](http://www.youtube.com/watch?v=k4f9m4OYkCY)
 
 How to use that bot
 -------------------
@@ -35,7 +36,7 @@ If you want to use a stock Yuno described here, you can fill the URL for skill w
 
 The regex invoking the bot is:
 
-    ^(NOT SURE IF|YO DAWG|)(.*)(Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)$
+    ^(NOT SURE IF|YO DAWG|)(.*)((Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)| ON THE MOO+N)$
 
 License
 -------
