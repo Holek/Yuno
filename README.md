@@ -9,6 +9,8 @@ Preview:
 ![The Most Interesting Man in the World](https://img.skitch.com/20110907-g42971ny4pd6m6archb5jm57tp.jpg)
 ![Not sure if X](https://img.skitch.com/20110907-n3km4mw8gd8tusqc9ix5ystrib.jpg)
 
+![Friendship is B***ch](https://img.skitch.com/20111024-k2fcfbb7k64w6118fbq83dye8y.png)
+
 Credits first!
 --------------
 
