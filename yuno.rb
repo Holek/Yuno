@@ -1,5 +1,5 @@
 class Yuno < AwesomeBotFactory::Skill
-  
+
   configure do |c|
     c.name = "Yuno"
     c.details = ""
@@ -7,9 +7,9 @@ class Yuno < AwesomeBotFactory::Skill
     c.url = "http://abf-yuno.herokuapp.com/yuno"
     c.regex = "^(NOT SURE IF|YO DAWG|)(.*)((Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)| ON THE MOO+N)$"
   end
-  
+
   matches :prepend, :text_1, :text_rest, :action, :text_2
-  
+
   def reply
     case self.prepend
     when "NOT SURE IF"
@@ -21,7 +21,7 @@ class Yuno < AwesomeBotFactory::Skill
     else
       case self.action
       # Y U NO/BUT WHEN I DO
-      when "Y U NO"http://memecaptain.com/all_the_things.jpg
+      when "Y U NO"
         image = "http://memecaptain.com/i?u=http%3A%2F%2Fmemecaptain.com%2Fy_u_no.jpg"
         image << "&tt=#{URI.encode_www_form_component(self.text_1)}" unless self.text_1.empty?
         image << "&tb=#{URI.encode_www_form_component("#{self.action} #{self.text_2}")}"
@@ -52,5 +52,5 @@ class Yuno < AwesomeBotFactory::Skill
     image << "#jpg" if image
     {:type => "TextMessage", :body => image || ""}
   end
-  
+
 end
