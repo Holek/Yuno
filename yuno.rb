@@ -21,7 +21,7 @@ class Yuno < AwesomeBotFactory::Skill
     else
       case self.action
       # Y U NO/BUT WHEN I DO
-      when "Y U NO"
+      when "Y U NO"http://memecaptain.com/all_the_things.jpg
         image = "http://memecaptain.com/i?u=http%3A%2F%2Fmemecaptain.com%2Fy_u_no.jpg"
         image << "&tt=#{URI.encode_www_form_component(self.text_1)}" unless self.text_1.empty?
         image << "&tb=#{URI.encode_www_form_component("#{self.action} #{self.text_2}")}"
@@ -31,9 +31,9 @@ class Yuno < AwesomeBotFactory::Skill
         image << "&tb=#{URI.encode_www_form_component("#{self.action} #{self.text_2}")}"
       when "ALL THE"
         if self.text_2[-1,1] == '?'
-          image_url = "http%3A%2F%2Fdl.dropbox.com%2Fu%2F23165202%2Fresponsibility12%2528alternate%25292.png"
+          image_url = "http%3A%2F%2Fmemecaptain.com%2Fall_the_things2.jpg"
         else
-          image_url = "http%3A%2F%2Ftroll.me%2Fimages%2Fx-all-the-things%2Fx-all-the-things.jpg"
+          image_url = "http%3A%2F%2Fmemecaptain.com%2Fall_the_things.jpg"
         end
         image = "http://memecaptain.com/i?u=#{image_url}&tt=#{URI.encode_www_form_component(self.body)}"
       when "YO DAWG"
