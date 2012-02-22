@@ -50,7 +50,7 @@ class Yuno < AwesomeBotFactory::Skill
         # Princess Luna has been doubled meme
         elsif /^ HAS BEEN DOUBLED$/.match(self.text_rest)
           image = "http://memecaptain.com/i?u=https%3A%2F%2Fimg.skitch.com%2F20120222-jfx4k9ydn7xum58wwuea85k9r6.png"
-          image << "&tb=#{URI.encode_www_form_component("#{self.text_1}#{self.text_rest.strip}")}"
+          image << "&tb=#{URI.encode_www_form_component("#{self.text_1} #{self.text_rest.strip}")}"
         end
       end
     end
