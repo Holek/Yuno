@@ -26,6 +26,7 @@ So far Yuno bot supports these memes:
 * [Not Sure If X](http://knowyourmeme.com/memes/futurama-fry-not-sure-if-x)
 * [Yo Dawg](http://knowyourmeme.com/memes/xzibit-yo-dawg)
 * [Friendship is B**ch](http://www.youtube.com/watch?v=k4f9m4OYkCY)
+* [The Fun Has Been Doubled](http://knowyourmeme.com/videos/21518-bronyspeak)
 
 How to use that bot
 -------------------
@@ -38,7 +39,7 @@ If you want to use a stock Yuno described here, you can fill the URL for skill w
 
 The regex invoking the bot is:
 
-    ^(NOT SURE IF|YO DAWG|)(.*)((Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)| ON THE MOO+N)$
+    ^(NOT SURE IF|YO DAWG|)(.*)((Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)| ON THE MOO+N| HAS BEEN DOUBLED)$
 
 License
 -------
