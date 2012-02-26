@@ -5,7 +5,7 @@ class Yuno < AwesomeBotFactory::Skill
     c.details = ""
     c.author = "holek"
     c.url = "http://abf-yuno.herokuapp.com/yuno"
-    c.regex = "^(NOT SURE IF|YO DAWG|)(.*)((Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)| ON THE MOO+N| HAS BEEN DOUBLED)$"
+    c.regex = "^(NOT SURE IF|YO DAWG|)(.*)((DOUBLE THE|Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)| ON THE MOO+N| HAS BEEN DOUBLED)$"
   end
 
   matches :prepend, :text_1, :text_rest, :action, :text_2
@@ -21,6 +21,9 @@ class Yuno < AwesomeBotFactory::Skill
     else
       case self.action
       # Y U NO/BUT WHEN I DO
+      when "DOUBLE THE"
+        image = "http://memecaptain.com/i?u=https%3A%2F%2Fimg.skitch.com%2F20120222-jfx4k9ydn7xum58wwuea85k9r6.png"
+        image << "&tb=#{URI.encode_www_form_component(self.body)}"
       when "Y U NO"
         image = "http://memecaptain.com/i?u=http%3A%2F%2Fmemecaptain.com%2Fy_u_no.jpg"
         image << "&tt=#{URI.encode_www_form_component(self.text_1)}" unless self.text_1.empty?
