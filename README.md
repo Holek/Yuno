@@ -39,7 +39,7 @@ If you want to use a stock Yuno described here, you can fill the URL for skill w
 
 The regex invoking the bot is:
 
-    ^(NOT SURE IF|YO DAWG|)(.*)((Y U NO|BUT WHEN I DO|ALL THE|OR|SO|YO DAWG) (.+)| ON THE MOO+N| HAS BEEN DOUBLED)$
+    ^(NOT SURE IF|YO DAWG|)(.*)((DOUBLE THE|Y U NO|BUT WHEN I DO| OR|ALL THE|SO|YO DAWG) (.+)| ON THE MOO+N| HAS BEEN DOUBLED)$
 
 License
 -------
